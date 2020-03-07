@@ -20,7 +20,7 @@ public class ServiceProvider {
     private int serverPort;
 
     public UserService.Client getUserService() {
-        TSocket socket = new TSocket("127.0.0.1", 7911, 3000);
+        TSocket socket = new TSocket(serverIp, serverPort, 3000);
         TTransport transport = new TFramedTransport(socket);
 
         try {
