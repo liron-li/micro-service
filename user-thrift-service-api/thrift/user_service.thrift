@@ -6,7 +6,7 @@ struct UserInfo {
     3:string password,
     4:string realname,
     5:string mobile,
-    6:string eamil
+    6:string email
 }
 
 service UserService {

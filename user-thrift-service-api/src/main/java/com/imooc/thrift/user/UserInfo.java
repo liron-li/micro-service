@@ -16,7 +16,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
   private static final org.apache.thrift.protocol.TField PASSWORD_FIELD_DESC = new org.apache.thrift.protocol.TField("password", org.apache.thrift.protocol.TType.STRING, (short)3);
   private static final org.apache.thrift.protocol.TField REALNAME_FIELD_DESC = new org.apache.thrift.protocol.TField("realname", org.apache.thrift.protocol.TType.STRING, (short)4);
   private static final org.apache.thrift.protocol.TField MOBILE_FIELD_DESC = new org.apache.thrift.protocol.TField("mobile", org.apache.thrift.protocol.TType.STRING, (short)5);
-  private static final org.apache.thrift.protocol.TField EAMIL_FIELD_DESC = new org.apache.thrift.protocol.TField("eamil", org.apache.thrift.protocol.TType.STRING, (short)6);
+  private static final org.apache.thrift.protocol.TField EMAIL_FIELD_DESC = new org.apache.thrift.protocol.TField("email", org.apache.thrift.protocol.TType.STRING, (short)6);
 
   private static final org.apache.thrift.scheme.SchemeFactory STANDARD_SCHEME_FACTORY = new UserInfoStandardSchemeFactory();
   private static final org.apache.thrift.scheme.SchemeFactory TUPLE_SCHEME_FACTORY = new UserInfoTupleSchemeFactory();
@@ -26,7 +26,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
   public @org.apache.thrift.annotation.Nullable java.lang.String password; // required
   public @org.apache.thrift.annotation.Nullable java.lang.String realname; // required
   public @org.apache.thrift.annotation.Nullable java.lang.String mobile; // required
-  public @org.apache.thrift.annotation.Nullable java.lang.String eamil; // required
+  public @org.apache.thrift.annotation.Nullable java.lang.String email; // required
 
   /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
   public enum _Fields implements org.apache.thrift.TFieldIdEnum {
@@ -35,7 +35,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     PASSWORD((short)3, "password"),
     REALNAME((short)4, "realname"),
     MOBILE((short)5, "mobile"),
-    EAMIL((short)6, "eamil");
+    EMAIL((short)6, "email");
 
     private static final java.util.Map<java.lang.String, _Fields> byName = new java.util.HashMap<java.lang.String, _Fields>();
 
@@ -61,8 +61,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
           return REALNAME;
         case 5: // MOBILE
           return MOBILE;
-        case 6: // EAMIL
-          return EAMIL;
+        case 6: // EMAIL
+          return EMAIL;
         default:
           return null;
       }
@@ -119,7 +119,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     tmpMap.put(_Fields.MOBILE, new org.apache.thrift.meta_data.FieldMetaData("mobile", org.apache.thrift.TFieldRequirementType.DEFAULT, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
-    tmpMap.put(_Fields.EAMIL, new org.apache.thrift.meta_data.FieldMetaData("eamil", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+    tmpMap.put(_Fields.EMAIL, new org.apache.thrift.meta_data.FieldMetaData("email", org.apache.thrift.TFieldRequirementType.DEFAULT, 
         new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.STRING)));
     metaDataMap = java.util.Collections.unmodifiableMap(tmpMap);
     org.apache.thrift.meta_data.FieldMetaData.addStructMetaDataMap(UserInfo.class, metaDataMap);
@@ -134,7 +134,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     java.lang.String password,
     java.lang.String realname,
     java.lang.String mobile,
-    java.lang.String eamil)
+    java.lang.String email)
   {
     this();
     this.id = id;
@@ -143,7 +143,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     this.password = password;
     this.realname = realname;
     this.mobile = mobile;
-    this.eamil = eamil;
+    this.email = email;
   }
 
   /**
@@ -164,8 +164,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     if (other.isSetMobile()) {
       this.mobile = other.mobile;
     }
-    if (other.isSetEamil()) {
-      this.eamil = other.eamil;
+    if (other.isSetEmail()) {
+      this.email = other.email;
     }
   }
 
@@ -181,7 +181,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     this.password = null;
     this.realname = null;
     this.mobile = null;
-    this.eamil = null;
+    this.email = null;
   }
 
   public int getId() {
@@ -308,27 +308,27 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
   }
 
   @org.apache.thrift.annotation.Nullable
-  public java.lang.String getEamil() {
-    return this.eamil;
+  public java.lang.String getEmail() {
+    return this.email;
   }
 
-  public UserInfo setEamil(@org.apache.thrift.annotation.Nullable java.lang.String eamil) {
-    this.eamil = eamil;
+  public UserInfo setEmail(@org.apache.thrift.annotation.Nullable java.lang.String email) {
+    this.email = email;
     return this;
   }
 
-  public void unsetEamil() {
-    this.eamil = null;
+  public void unsetEmail() {
+    this.email = null;
   }
 
-  /** Returns true if field eamil is set (has been assigned a value) and false otherwise */
-  public boolean isSetEamil() {
-    return this.eamil != null;
+  /** Returns true if field email is set (has been assigned a value) and false otherwise */
+  public boolean isSetEmail() {
+    return this.email != null;
   }
 
-  public void setEamilIsSet(boolean value) {
+  public void setEmailIsSet(boolean value) {
     if (!value) {
-      this.eamil = null;
+      this.email = null;
     }
   }
 
@@ -374,11 +374,11 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
       }
       break;
 
-    case EAMIL:
+    case EMAIL:
       if (value == null) {
-        unsetEamil();
+        unsetEmail();
       } else {
-        setEamil((java.lang.String)value);
+        setEmail((java.lang.String)value);
       }
       break;
 
@@ -403,8 +403,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     case MOBILE:
       return getMobile();
 
-    case EAMIL:
-      return getEamil();
+    case EMAIL:
+      return getEmail();
 
     }
     throw new java.lang.IllegalStateException();
@@ -427,8 +427,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
       return isSetRealname();
     case MOBILE:
       return isSetMobile();
-    case EAMIL:
-      return isSetEamil();
+    case EMAIL:
+      return isSetEmail();
     }
     throw new java.lang.IllegalStateException();
   }
@@ -493,12 +493,12 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
         return false;
     }
 
-    boolean this_present_eamil = true && this.isSetEamil();
-    boolean that_present_eamil = true && that.isSetEamil();
-    if (this_present_eamil || that_present_eamil) {
-      if (!(this_present_eamil && that_present_eamil))
+    boolean this_present_email = true && this.isSetEmail();
+    boolean that_present_email = true && that.isSetEmail();
+    if (this_present_email || that_present_email) {
+      if (!(this_present_email && that_present_email))
         return false;
-      if (!this.eamil.equals(that.eamil))
+      if (!this.email.equals(that.email))
         return false;
     }
 
@@ -527,9 +527,9 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     if (isSetMobile())
       hashCode = hashCode * 8191 + mobile.hashCode();
 
-    hashCode = hashCode * 8191 + ((isSetEamil()) ? 131071 : 524287);
-    if (isSetEamil())
-      hashCode = hashCode * 8191 + eamil.hashCode();
+    hashCode = hashCode * 8191 + ((isSetEmail()) ? 131071 : 524287);
+    if (isSetEmail())
+      hashCode = hashCode * 8191 + email.hashCode();
 
     return hashCode;
   }
@@ -592,12 +592,12 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
         return lastComparison;
       }
     }
-    lastComparison = java.lang.Boolean.valueOf(isSetEamil()).compareTo(other.isSetEamil());
+    lastComparison = java.lang.Boolean.valueOf(isSetEmail()).compareTo(other.isSetEmail());
     if (lastComparison != 0) {
       return lastComparison;
     }
-    if (isSetEamil()) {
-      lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.eamil, other.eamil);
+    if (isSetEmail()) {
+      lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.email, other.email);
       if (lastComparison != 0) {
         return lastComparison;
       }
@@ -659,11 +659,11 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
     }
     first = false;
     if (!first) sb.append(", ");
-    sb.append("eamil:");
-    if (this.eamil == null) {
+    sb.append("email:");
+    if (this.email == null) {
       sb.append("null");
     } else {
-      sb.append(this.eamil);
+      sb.append(this.email);
     }
     first = false;
     sb.append(")");
@@ -751,10 +751,10 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
             break;
-          case 6: // EAMIL
+          case 6: // EMAIL
             if (schemeField.type == org.apache.thrift.protocol.TType.STRING) {
-              struct.eamil = iprot.readString();
-              struct.setEamilIsSet(true);
+              struct.email = iprot.readString();
+              struct.setEmailIsSet(true);
             } else { 
               org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
             }
@@ -797,9 +797,9 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
         oprot.writeString(struct.mobile);
         oprot.writeFieldEnd();
       }
-      if (struct.eamil != null) {
-        oprot.writeFieldBegin(EAMIL_FIELD_DESC);
-        oprot.writeString(struct.eamil);
+      if (struct.email != null) {
+        oprot.writeFieldBegin(EMAIL_FIELD_DESC);
+        oprot.writeString(struct.email);
         oprot.writeFieldEnd();
       }
       oprot.writeFieldStop();
@@ -835,7 +835,7 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
       if (struct.isSetMobile()) {
         optionals.set(4);
       }
-      if (struct.isSetEamil()) {
+      if (struct.isSetEmail()) {
         optionals.set(5);
       }
       oprot.writeBitSet(optionals, 6);
@@ -854,8 +854,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
       if (struct.isSetMobile()) {
         oprot.writeString(struct.mobile);
       }
-      if (struct.isSetEamil()) {
-        oprot.writeString(struct.eamil);
+      if (struct.isSetEmail()) {
+        oprot.writeString(struct.email);
       }
     }
 
@@ -884,8 +884,8 @@ public class UserInfo implements org.apache.thrift.TBase<UserInfo, UserInfo._Fie
         struct.setMobileIsSet(true);
       }
       if (incoming.get(5)) {
-        struct.eamil = iprot.readString();
-        struct.setEamilIsSet(true);
+        struct.email = iprot.readString();
+        struct.setEmailIsSet(true);
       }
     }
   }
