@@ -13,7 +13,7 @@
         <module>user-thrift-service-api</module>
         <module>user-thrift-service</module>
         <module>user-edge-service</module>
-        <module>api-gateway-zul</module>
+        <module>api-gateway-zuul</module>
     </modules>
 
 
