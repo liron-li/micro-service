@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  user-service:
+    image: user-service:latest
+    command:
+      - "--mysql.address=192.168.100.12"
+
+  user-edge-service:
+    image: user-edge-service:latest
+    links:
+      - user-service
+    command:
+      - "--redis.address=192.168.100.12"
+  api-gateway-zuul:
+    image: api-gateway-zuul:latest
+    links:
+      - user-edge-service
+    ports:
+    - 8080:8080
